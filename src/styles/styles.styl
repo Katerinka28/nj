@@ -1,0 +1,96 @@
+
+@import './fonts'
+@import './font-image.css'
+// @import './reser.css'
+
+
+* 
+  margin 0
+  padding 0
+  box-sizing border-box
+
+@media screen and (max-width: 1200px) //netbook
+  .container
+      width 960px
+
+@media screen and (max-width: 960px) //tablet
+  .container
+      width 720px
+
+@media screen and (max-width: 720px) //mobile1
+  .container
+      width 480px
+
+@media screen and (max-width: 480px) //mobile2
+  .container
+    width 320px
+  body 
+    font-family Proxima-Nova-Regular
+  
+  .header
+    position fixed
+    width 100%
+    background-color #1c3051
+    border-bottom-style solid
+    border-bottom-width 2px  
+    border-bottom-color #ff7101
+    height auto
+  .header--logo
+    display block
+    float left
+    width 50%
+    height auto
+    
+  .header--cities
+    display block
+    border-left-color #000000
+    border-left-width 1px
+    border-left-style solid 
+    float left 
+    padding-left 10px
+    padding-right 30px
+    width 50%
+    height auto
+    
+  .header--cities li
+    text-transform uppercase
+    list-style-type none
+    font-family Montserrat-Regular
+    font-size 13px
+  .header--menu
+    display inline-block
+    width 100%
+    height auto
+  .header--menu li
+    display block
+    font-family Montserrat-Regular
+    font-size 10px
+    text-transform uppercase
+    list-style-type none
+    float left
+    padding 15px
+  .header--telephone
+    display block
+    float right
+  .header__telephone--icon
+     
+  .header__telephone--select 
+    font-family Montserrat-Regular
+    font-size 21.94px
+    background transparent
+    float right
+    
+    
+
+    
+    
+      
+      
+
+  #map
+    width 100%
+    height 400px
+    background-color grey
+
+
+      

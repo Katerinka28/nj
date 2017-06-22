@@ -1,0 +1,14 @@
+mixin CreateItem1(image, title)
+    div(class=attributes.class)
+        img(src=image, class=attributes.class+'__image')
+        p(class=attributes.class +'__title') #{title}
+mixin CreateItem2(image, title)
+    div(class=attributes.class)
+        img(src=image, class=attributes.class+'__image')
+        p(class=attributes.class +'__title') #{title}
+
+mixin CreateItem3( image, title, text )
+    div(class=attributes.class)
+        img(src=image, class=attributes.class+'__image')
+        p(class=attributes.class +'__title') #{title}
+        p(class=attributes.class +'__text') #{text}
