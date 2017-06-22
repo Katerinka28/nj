@@ -1,6 +1,6 @@
 include ../mixin/mixin
 
--var links = ['Services', 'Promotionf', 'FAQs', 'Reviews', 'About us']
+-var links = ['Services', 'Promotions', 'FAQs', 'Reviews', 'About us']
 -var datalocal =[{title:"Packing"}, {title:"Unpacking"}, {title:"Labor Jobs"}]
 -var datalong= [{title:"Hauling"}, {title:"Delivery service"}, {title:"Commercial Moving"} ]
 -var datareview = [{title:'Brian Cobb'},{title:'Vincent Morgan'},{title:' Daniel Houston'}]
@@ -34,18 +34,20 @@ html
             div.top
                 div.container
                     div.top__slogan
+                        img.top__slogan--image(src="./images/top-image.png")
                         p.top__slogan--title Moving New Jersey
                         p.top__slogan--text We are professionals in their field
-                        a.top.slogan--btn(href="https://youtu.be/sQgNszUiqLs") Watch videos
-                        img.top__slogan--image(src="./images/top-image.png")
+                        div.button
+                            a.top__slogan--btn(href="https://youtu.be/sQgNszUiqLs") Watch videos
+                    
             div.callback
                 div.container
-                    img.top__slogan--image(src="./images/form-image.png")
-                    p.top__callback--title Do you need a consultation?
-                    p.top__callback--text Complete the form and our manager will contact you during the day.
-                    input.top__callback--form-name
-                    input.top__callback--form-telephone
-                    input.top__callback--btn-send
+                    img.callback--image(src="./images/form-image.png")
+                    p.callback--title Do you need a consultation?
+                    p.callback--text Complete the form and our manager will contact you during the day.
+                    input.callback--form-name
+                    input.callback--form-telephone
+                    button.callback--btn-send
             div.services    
                 div.container
                     div.services__kind-of-services
