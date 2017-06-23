@@ -16,16 +16,16 @@ html
 
     body
         div.wrap
-            div.header
+            div.header.container-fluid
                 div.container
-                    img.header--logo(src="./images/header-logo.png")
-                    ul.header--cities
-                        li Newark
-                        li NewJersey
-                        li Usa
-                    ul.header--menu
+                    img.header__logo(src="./images/header-logo.png")
+                    ul.header__cities
+                        li.header__city Newark
+                        li.header__city NewJersey
+                        li.header__city Usa
+                    ul.header__menu
                         each link in links 
-                                    li: a(href="") #{link}
+                            li.header__link: a(href="") #{link}
                     div.header__telephone 
                             img.header__telephone--icon(src="./images/header-icon.png")
                             select.header__telephone--select
@@ -42,12 +42,12 @@ html
                     
             div.callback
                 div.container
-                    img.callback--image(src="./images/form-image.png")
-                    p.callback--title Do you need a consultation?
-                    p.callback--text Complete the form and our manager will contact you during the day.
-                    input.callback--form-name
-                    input.callback--form-telephone
-                    button.callback--btn-send
+                    img.callback__image(src="./images/form-image.png")
+                    p.callback__title Do you need a consultation?
+                    p.callback__text Complete the form and our manager will contact you during the day.
+                    input(type="text").callback__form-name
+                    input(type="").callback__form-telephone
+                    input(type="submit").callback__btn-send
             div.services    
                 div.container
                     div.services__kind-of-services

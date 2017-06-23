@@ -85,212 +85,224 @@
   -webkit-box-sizing: border-box;
   box-sizing: border-box;
 }
-@media screen and (max-width: 1200px) {
+body {
+  font-size: 14px;
+  font-family: Proxima-Nova-Regular;
+}
+.header {
+  width: 100%;
+  background-color: #1c3051;
+  border-bottom-style: solid;
+  border-bottom-width: 2px;
+  border-bottom-color: #ff7101;
+}
+.container {
+  width: 320px;
+  margin: 0 auto;
+  height: auto;
+}
+.header__logo {
+  display: block;
+  float: left;
+  width: 30%;
+  height: auto;
+}
+.header__cities {
+  display: none;
+  border-left-color: #000;
+  border-left-width: 1px;
+  border-left-style: solid;
+  float: left;
+  width: 30%;
+}
+.header__city {
+  display: block;
+  text-transform: uppercase;
+  list-style-type: none;
+  float: left;
+  font-family: Montserrat-Regular;
+  font-size: 0.4em;
+}
+.header__menu {
+  display: inline-block;
+  width: 100%;
+}
+.header__menu:first-child {
+  padding-left: 0;
+}
+.header__menu:last-child {
+  padding-right: 0;
+}
+.header__link {
+  display: block;
+  font-family: Montserrat-Regular;
+  font-size: 0.71em;
+  text-transform: uppercase;
+  list-style-type: none;
+  float: left;
+  padding: 0 1.61%;
+}
+.header__link a {
+  text-decoration: none;
+}
+.header__link a:hover {
+  color: #000;
+}
+.header__link a:active {
+  color: #fff;
+}
+.header__link a:visited {
+  color: #fff;
+}
+.header--telephone {
+  display: block;
+  float: right;
+}
+.header__telephone--icon {
+  display: block;
+  float: right;
+  left: -50%;
+  -webkit-transform: translateY(-230%);
+  -ms-transform: translateY(-230%);
+  transform: translateY(-230%);
+  width: 5%;
+}
+.header__telephone--select {
+  display: block;
+  float: right;
+  position: absolute;
+  left: 45%;
+  -webkit-transform: translateY(-200%);
+  -ms-transform: translateY(-200%);
+  transform: translateY(-200%);
+  font-family: Montserrat-Regular;
+  font-size: 1em;
+  background: transparent;
+}
+.top {
+  width: 100%;
+  background: url("../images/top-bg.png") no-repeat center;
+  height: auto;
+}
+.top__slogan {
+  height: 180px;
+}
+.top__slogan--image {
+  display: block;
+  float: right;
+  width: 39.9%;
+  height: auto;
+}
+.top__slogan--title {
+  display: block;
+  font-family: Montserrat-Black;
+  width: 61%;
+  font-size: 1.6em;
+  padding: 7.4% 5% 1% 0;
+  text-transform: uppercase;
+  color: #fff;
+}
+.top__slogan--text {
+  width: 61%;
+  font-size: 0.55em;
+  padding: 0 5% 5% 0;
+  font-family: Proxima-Nova-Black;
+  color: #1c3051;
+  text-transform: uppercase;
+}
+.button {
+  display: block;
+  width: 23%;
+  height: 10%;
+  background: url("../images/top-button.png") no-repeat left;
+  background-size: 15%;
+  border: none;
+  border-radius: 50px;
+  background-color: #ff7101;
+  margin: 0 0;
+  line-height: 20px;
+}
+.top__slogan--btn {
+  font-family: Montserrat-Black;
+  color: #fff;
+  font-size: 0.01em;
+  text-decoration: none;
+  padding-left: 15px;
+}
+.callback {
+  width: 100%;
+  height: auto;
+  background: url("../images/form-bg.png") no-repeat;
+}
+.callback__image {
+  display: block;
+  width: 57%;
+  position: absolute;
+  right: 46.7%;
+}
+.callback__title {
+  display: block;
+  width: 60%;
+  font-size: 0.4em;
+  text-transform: uppercase;
+  float: right;
+}
+.callback__text {
+  float: right;
+  display: block;
+  width: 60%;
+  font-size: 0.2em;
+  text-transform: uppercase;
+}
+.callback__form-name {
+  float: right;
+  display: block;
+  background: transparent;
+  border-radius: 50px;
+}
+.callback__form-telephone {
+  float: right;
+  display: block;
+  border-radius: 50px;
+}
+.callback__btn-send {
+  background: #fff;
+  width: 50px;
+  height: 25px;
+}
+.callback--blue {
+  background: url("../images/form-23.png") no-repeat;
+}
+h1 {
+  text-transform: uppercase;
+}
+.services__item-local {
+  height: 200px;
+  width: 100%;
+}
+#map {
+  width: 100%;
+  height: 400px;
+  background-color: #808080;
+}
+@media screen and (min-width: 480px) {
   .container {
-    width: 960px;
+    width: 310px;
+    padding: 0 5px;
   }
 }
-@media screen and (max-width: 960px) {
+@media screen and (min-width: 720px) {
   .container {
-    width: 720px;
+    width: 690px;
   }
 }
-@media screen and (max-width: 720px) {
+@media screen and (min-width: 960px) {
   .container {
-    width: 480px;
+    width: 930px;
   }
 }
-@media screen and (max-width: 480px) {
-  body {
-    font-family: Proxima-Nova-Regular;
-  }
-  .header {
-    width: 100%;
-    background-color: #1c3051;
-    border-bottom-style: solid;
-    border-bottom-width: 2px;
-    border-bottom-color: #ff7101;
-  }
+@media screen and (min-width: 1200px) {
   .container {
-    width: 320px;
-    margin: 0 auto;
-    height: auto;
-  }
-  .header--logo {
-    display: block;
-    float: left;
-    width: 30%;
-    height: auto;
-  }
-  .header--cities {
-    display: none;
-    border-left-color: #000;
-    border-left-width: 1px;
-    border-left-style: solid;
-    float: left;
-    width: 30%;
-  }
-  .header--cities li {
-    display: block;
-    text-transform: uppercase;
-    list-style-type: none;
-    float: left;
-    font-family: Montserrat-Regular;
-    font-size: 0.4em;
-  }
-  .header--menu {
-    display: inline-block;
-    width: 100%;
-  }
-  .header--menu li {
-    display: block;
-    font-family: Montserrat-Regular;
-    font-size: 0.71em;
-    text-transform: uppercase;
-    list-style-type: none;
-    float: left;
-    padding: 0 1.61%;
-  }
-  .header--menu li a {
-    text-decoration: none;
-  }
-  .header--menu li a:hover {
-    color: #000;
-  }
-  .header--menu li a:active {
-    color: #fff;
-  }
-  .header--menu li a:visited {
-    color: #fff;
-  }
-  .header--menu :first-child {
-    padding-left: 0;
-  }
-  .header--menu :last-child {
-    padding-right: 0;
-  }
-  .header--telephone {
-    display: block;
-    float: right;
-  }
-  .header__telephone--icon {
-    display: block;
-    float: right;
-    left: -50%;
-    -webkit-transform: translateY(-230%);
-    -ms-transform: translateY(-230%);
-    transform: translateY(-230%);
-    width: 5%;
-  }
-  .header__telephone--select {
-    display: block;
-    float: right;
-    position: absolute;
-    left: 45%;
-    -webkit-transform: translateY(-200%);
-    -ms-transform: translateY(-200%);
-    transform: translateY(-200%);
-    font-family: Montserrat-Regular;
-    font-size: 1em;
-    background: transparent;
-  }
-  .top {
-    width: 100%;
-    background: url("../images/top-bg.png") no-repeat center;
-    height: auto;
-  }
-  .top__slogan {
-    height: 180px;
-  }
-  .top__slogan--image {
-    display: block;
-    float: right;
-    width: 39.9%;
-    height: auto;
-  }
-  .top__slogan--title {
-    display: block;
-    font-family: Montserrat-Black;
-    width: 61%;
-    font-size: 1.6em;
-    padding: 7.4% 5% 1% 0;
-    text-transform: uppercase;
-    color: #fff;
-  }
-  .top__slogan--text {
-    width: 61%;
-    font-size: 0.55em;
-    padding: 0 5% 5% 0;
-    font-family: Proxima-Nova-Black;
-    color: #1c3051;
-    text-transform: uppercase;
-  }
-  .button {
-    display: block;
-    width: 23%;
-    height: 10%;
-    background: url("../images/top-button.png") no-repeat left;
-    background-size: 15%;
-    border: none;
-    border-radius: 50px;
-    background-color: #ff7101;
-    margin: 0 0;
-    line-height: 20px;
-  }
-  .top__slogan--btn {
-    font-family: Montserrat-Black;
-    color: #fff;
-    font-size: 0.01em;
-    text-decoration: none;
-    padding-left: 15px;
-  }
-  .callback {
-    width: 100%;
-    height: auto;
-    background: url("../images/form-bg.png") no-repeat;
-  }
-  .callback--image {
-    display: block;
-    width: 57%;
-    position: absolute;
-    right: 46.7%;
-  }
-  .callback--title {
-    display: block;
-    width: 60%;
-    font-size: 0.4em;
-    text-transform: uppercase;
-    float: right;
-  }
-  .callback--text {
-    float: right;
-    display: block;
-    width: 60%;
-    font-size: 0.2em;
-    text-transform: uppercase;
-  }
-  .callback--form-name {
-    float: right;
-    display: block;
-    background: transparent;
-    border-radius: 50px;
-  }
-  .callback--form-telephone {
-    float: right;
-    display: block;
-    border-radius: 50px;
-  }
-  .callback--btn-send {
-    background: #fff;
-    width: 50px;
-    height: 25px;
-  }
-  h1 {
-    text-transform: uppercase;
-  }
-  #map {
-    width: 100%;
-    height: 400px;
-    background-color: #808080;
+    width: 1170px;
   }
 }
