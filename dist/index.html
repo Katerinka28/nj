@@ -7,173 +7,115 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
   </head>
   <body>
-    <div class="wrap">
-      <div class="header container-fluid">
-        <div class="container"><img class="header__logo" src="./images/header-logo.png">
-          <ul class="header__cities">
-            <li class="header__city">Newark</li>
-            <li class="header__city">NewJersey</li>
-            <li class="header__city">Usa</li>
-          </ul>
-          <ul class="header__menu">
-            <li class="header__link"><a href="">Services</a></li>
-            <li class="header__link"><a href="">Promotions</a></li>
-            <li class="header__link"><a href="">FAQs</a></li>
-            <li class="header__link"><a href="">Reviews</a></li>
-            <li class="header__link"><a href="">About us</a></li>
-          </ul>
-          <div class="header__telephone"> <img class="header__telephone--icon" src="./images/header-icon.png">
-            <select class="header__telephone--select">
-              <option value="(333) 777-3333">(333)777-3333</option>
-              <option>(555)777-8888          </option>
-            </select>
-          </div>
+    <div class="header clearfix">
+      <div class="container clearfix"><img class="header__logo clearfix" src="./images/header-logo.png">
+        <ul class="header__cities clearfix">
+          <li class="header__city">Newark</li>
+          <li class="header__city">NewJersey</li>
+          <li class="header__city">Usa</li>
+        </ul>
+        <ul class="header__menu clearfix">
+          <li class="header__link"><a href="">Services</a></li>
+          <li class="header__link"><a href="">Promotions</a></li>
+          <li class="header__link"><a href="">FAQs</a></li>
+          <li class="header__link"><a href="">Reviews</a></li>
+          <li class="header__link"><a href="">About us</a></li>
+        </ul>
+        <div class="telephone clearfix"> <img class="telephone__icon clearfix" src="./images/header-icon.png">
+          <select class="telephone__select clearfix">
+            <option value="(333) 777-3333">(333)777-3333</option>
+            <option>(555)777-8888          </option>
+          </select>
         </div>
       </div>
-      <div class="top">
-        <div class="container">
-          <div class="top__slogan"><img class="top__slogan--image" src="./images/top-image.png">
-            <p class="top__slogan--title">Moving New Jersey</p>
-            <p class="top__slogan--text">We are professionals in their field</p>
-            <div class="button"><a class="top__slogan--btn" href="https://youtu.be/sQgNszUiqLs">Watch videos</a></div>
-          </div>
+    </div>
+    <div class="top clearfix">
+      <div class="container">
+        <div class="top-left clearfix">
+          <p class="top-left__title clearfix">Moving New Jersey</p>
+          <p class="top-left__text clearfix">We are professionals in their field</p><a class="top-left__btn clearfix" href="https://youtu.be/sQgNszUiqLs">Watch videos</a>
         </div>
+        <div class="top-right clearfix"><img class="top-right__image clearfix" src="./images/top-image.png"></div>
       </div>
-      <div class="callback">
-        <div class="container"><img class="callback__image" src="./images/form-image.png">
-          <p class="callback__title">Do you need a consultation?</p>
-          <p class="callback__text">Complete the form and our manager will contact you during the day.</p>
-          <input class="callback__form-name" type="text">
-          <input class="callback__form-telephone" type="">
-          <input class="callback__btn-send" type="submit">
+    </div>
+    <div class="callback clearfix">
+      <div class="container">
+        <div class="callback-picture clearfix"><img class="callback-picture__image clearfix" src="./images/form-image.png"></div>
+        <div class="form-title clearfix">
+          <p class="form-title__title clearfix">Do you need a consultation?</p>
+          <p class="form-title__text clearfix">Complete the form and our manager will contact you during the day.</p>
         </div>
+        <form class="form clearfix" type="" action="" id="form">
+          <input class="form__name clearfix" name="name" id="name" type="text" placeholder="Name..." required>
+          <input class="form__telephone clearfix" name="tel" id="tel" type="tel" placeholder="Phone..." required>
+          <input class="btn-send clearfix" type="submit" value="Send">
+        </form>
       </div>
-      <div class="services">   
-        <div class="container">
-          <div class="services__kind-of-services">
-            <H1>services</H1>
-            <div class="services__kind-of-services--local">
-              <div class="services__item-local"><img class="services__item-local__image" src="./images/services-local-image0.png"/>
-                <p class="services__item-local__title">Packing</p>
-              </div>
-              <div class="services__item-local"><img class="services__item-local__image" src="./images/services-local-image1.png"/>
-                <p class="services__item-local__title">Unpacking</p>
-              </div>
-              <div class="services__item-local"><img class="services__item-local__image" src="./images/services-local-image2.png"/>
-                <p class="services__item-local__title">Labor Jobs</p>
-              </div>
+    </div>
+    <div class="services clearfix"> 
+      <div class="container">
+        <H1>services</H1>
+        <p class="services__title-local">Local moving</p>
+        <p class="services__title-long">Long distance moving</p>
+        <div class="services-item clearfix">
+          <div class="items-local clearfix">
+            <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image0.png"/>
+              <p class="items-local__item__title">Packing</p>
             </div>
-            <div class="services__kind-of-services--local">
-              <div class="services__item-long"><img class="services__item-long__image" src="./images/services-long-distance-image0.png"/>
-                <p class="services__item-long__title">Hauling</p>
-              </div>
-              <div class="services__item-long"><img class="services__item-long__image" src="./images/services-long-distance-image1.png"/>
-                <p class="services__item-long__title">Delivery service</p>
-              </div>
-              <div class="services__item-long"><img class="services__item-long__image" src="./images/services-long-distance-image2.png"/>
-                <p class="services__item-long__title">Commercial Moving</p>
-              </div>
+            <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image1.png"/>
+              <p class="items-local__item__title">Unpacking</p>
+            </div>
+            <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image2.png"/>
+              <p class="items-local__item__title">Labor Jobs</p>
             </div>
           </div>
-        </div>
-      </div>
-      <div class="promotion">                  
-        <div class="container">
-          <div class="registration" id="registrations">
-            <p class="promotion__registration--title">Why customers again and again chosen our company services?</p>
-            <p class="promotion__registration--text">Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?</p>
-            <p class="promotion__registration--title-form"></p>
-            <input class="promotion__registration--name">
-            <input class="promotion__registration--email">
-            <input class="promotion__registration--phone">
-            <input class="promotion__registration--date">
-            <input class="promotion__registration--zip-from">
-            <input class="promotion__registration--zip-to">
-            <select class="promotion__registration--select">
-              <option value="Choose moving size" selected> </option>
-              <option>50kg</option>
-              <option>100 kg</option>
-              <option>1000 kg</option>
-            </select>
-            <input class="promotion__registration--message">
-            <p class="promotion__registration--question"> How did you hear about us</p>
-            <input class="promotion__registration--aunser"><a class="promotion__registration--send" href="">Get quick qoute</a>
-          </div>
-          <div class="counter">
-            <h2>Few of us in numbers</h2><span class="icon-Icon-center-left"></span><span class="icon-Icon-right"></span><span class="icon-Icon-center-right"></span><span class="icon-Icon-left"></span>
-            <p class="counter--text-left">Years in business</p>
-            <p class="counter--text-center-left">Cargo transportation</p>
-            <p class="counter--text-center-right">Constant clients</p>
-            <p class="counter--text-right">Annual growth cargo transportation</p>
-          </div>
-          <div class="offer">
-            <h3>Get a 7% discount on local moving, or 5% on long distance moving. To do this, fill out the form now Get a free quote. By the end of the offer remains</h3><a class="offer--btn" href="#registrations">Get a free quote</a>
-          </div>
-          <div class="cashback">
-            <h4>Refer a friend get a bonus. How it works?</h4>
-            <p class="cashback--title-left">Frank Used NJ Local Moving</p>
-            <p class="cashback--title-center-bottom">Amy was looking for profesional movers</p>
-            <p class="cashback--title-center-top">NJ Local Moving Gave bonus to Frank</p>
-            <p class="cashback--title-center-left">Frank reffered NJ Local Moving</p>
-            <p class="cashback--title-center-right">Amy booked her job with NJ Local Moving</p>
-            <p class="cashback--title-right">We are always happy to help</p><img class="cashback--arrow" src="./images/arrow-long.png"><img class="cashback--arrow-left" src="./images/arrow-short.png"><img class="cashback--arrow-right" src="./images/arrow-short.png"><img class="cashback--image-left" src="./images/cashback-image-left.png"><img class="cashback--image-center" src="./images/cashback-image-center.png"><img class="cashback--image-right" src="./images/cashback-image-right.png">
-            <p class="cashback--text">
-              Somebody steered you in our direction? That's great news for you - regardless of what you need to move, or whether it's personal or business. Either way, just tell us the name
-              of the kind person who wants to move and you'll get 7% cash back for a local move and 5% cash back for a long distance move. 
-            </p>
+          <div class="items-long clearfix">
+            <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image0.png"/>
+              <p class="items-long__item__title">Hauling</p>
+            </div>
+            <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image1.png"/>
+              <p class="items-long__item__title">Delivery service</p>
+            </div>
+            <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image2.png"/>
+              <p class="items-long__item__title">Commercial Moving</p>
+            </div>
           </div>
         </div>
       </div>
-      <div class="about">
-        <div class="container">
-          <h5>Our company</h5><img class="about--image" src="./images/company_image.png">
-          <p class="about--text">
-            Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.
-            
-            Quo ut nibh possim. Vis commodo debitis abhorreant ex, eum simul legimus atomorum ex. Ex ferri dolor exerci vel, malis graecis id vim, sea cu debet omittam. Et quis legere sit, quando nostrud periculis ut sit, cu qui summo signiferumque. Tale detracto cu eam, nam ea amet novum fierent. Ad pri porro saepe aperiam, ex has doming pericula ullamcorper. An vix offendit sapientem reprehendunt. Est ad latine ceteros conclusionemque. Sea vocent eripuit te, te sensibus praesent moderatius sit.
-            
-            Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.
-          </p>
-          <p class="about--title">Dmytro Dyshkant, CEO</p>
-          <p class="about--content">Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.</p><img class="about--icon" src="./images/about-icon.png">
+    </div>
+    <div class="promotion clearfix">                  
+      <div class="container">
+        <div class="registration clearfix">
+          <p class="registration__title clearfix">Why customers again and again chosen our company services?</p>
+          <p class="registration__text clearfix">Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?</p>
+        </div>
+        <div class="form clearfix">
+          <p class="form__line-top">  </p>
+          <p class="form__title-form clearfix">Get a free quote</p>
+          <input class="form__name clearfix" placeholder="Full name">
+          <input class="form__email clearfix" placeholder="E-mail">
+          <input class="form__phone clearfix" placeholder="Phone">
+          <input class="form__date clearfix" placeholder="Date">
+          <input class="form__zip-from clearfix" placeholder="Zip from">
+          <input class="form__zip-to clearfix" placeholder="Zip to">
+          <select class="form__select clearfix">
+            <option>Choose moving size</option>
+            <option>50kg</option>
+            <option>100 kg</option>
+            <option>1000 kg</option>
+          </select>
+          <textarea class="form__message clearfix"></textarea>
+          <p class="form__question clearfix"> How did you hear about us?</p>
+          <input class="form__aunser clearfix">
+          <input class="form__send clearfix" href="" type="submit" value="Get free quote">
+          <p class="form__line-bottom"></p>
         </div>
       </div>
-      <div class="faq">   
-        <div class="container">
-          <p class="faq--title">Frequently Asked Questions</p>
-        </div>
-      </div>
-      <div class="feedback">   
-        <div class="container">
-          <p class="feedback--title">You will not find the answer to your question? </p>
-          <p class="feedback--text">Ask your question to the manager, and during the day we will call you back and answer your question?</p>
-          <input class="feedback--form-name">
-          <input class="feedback--form-phone">
-          <input class="feedback--form-email">
-          <input class="feedback--form-question"><a class="feedback--form-send">ask</a>
-        </div>
-      </div>
-      <div class="review">
-        <div class="container">
-          <p class="review--tit">The most important indicator of the level of the company - it is the grateful feedback from our customers</p><span class="icon-chevron-left"></span>
-          <div class="reveiw--card"><img class="reveiw--card__image" src="./images/feedback-customers0.png"/>
-            <p class="reveiw--card__title">Brian Cobb</p>
-            <p class="reveiw--card__text">Lorem ipsum dolor sit amet, eu sea cetero contentiones, ut mei ridens mollis prodesset. Ne atqui congue eirmod nec, nec assueverit instructior te. Amet expetenda urbanitas ei sed.</p>
-          </div>
-          <div class="reveiw--card"><img class="reveiw--card__image" src="./images/feedback-customers1.png"/>
-            <p class="reveiw--card__title">Vincent Morgan</p>
-            <p class="reveiw--card__text">Lorem ipsum dolor sit amet, eu sea cetero contentiones, ut mei ridens mollis prodesset. Ne atqui congue eirmod nec, nec assueverit instructior te. Amet expetenda urbanitas ei sed.</p>
-          </div>
-          <div class="reveiw--card"><img class="reveiw--card__image" src="./images/feedback-customers2.png"/>
-            <p class="reveiw--card__title"> Daniel Houston</p>
-            <p class="reveiw--card__text">Lorem ipsum dolor sit amet, eu sea cetero contentiones, ut mei ridens mollis prodesset. Ne atqui congue eirmod nec, nec assueverit instructior te. Amet expetenda urbanitas ei sed.</p>
-          </div><span class="icon-chevron-right"></span>
-        </div>
-      </div>
-      <div id="map"></div>
-      <div class="footer">  </div>
     </div>
   </body>
+  <div id="map"></div>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
   <script src="./scripts/bundle.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvM0CzDixRaf8jNBdl_wIGhneO2b6-YEY&amp;callback=initMap" async defer></script>
 </html>

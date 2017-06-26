@@ -115,5 +115,6 @@ gulp.task('browserSync', function() {
 gulp.task('default', ['indexTemplate', 'js', 'styles', 'browserSync', 'images'], function() {
     gulp.watch(['src/**/*.styl', 'src/**/*.css'], ['styles-watch']);
     gulp.watch('src/**/*.pug', ['indexTemplate']);
+    gulp.watch('src/**/*.js', ['js']);
     
 });

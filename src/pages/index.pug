@@ -13,6 +13,7 @@ html
       
         link(rel="stylesheet", href="./css/bundle.min.css")
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
+   
 
     body
         div.header.clearfix
@@ -46,10 +47,19 @@ html
                 div.form-title.clearfix
                     p.form-title__title.clearfix Do you need a consultation?
                     p.form-title__text.clearfix Complete the form and our manager will contact you during the day.
-                div.form.clearfix
-                    input(type="text" placeholder="Name...").form__name.clearfix
-                    input(type="tel" placeholder="Phone...").form__telephone.clearfix
-                    input(type="submit").btn-send.clearfix 
+                form(type="" action="").form#form.clearfix
+                    
+                    input(name="name" id="name" type="text" placeholder="Name..." required).form__name.clearfix 
+                    input(name="tel" id="tel" type="tel" placeholder="Phone..." required).form__telephone.clearfix
+                    input(type="submit" value="Send").btn-send.clearfix
+                        
+                        
+                           
+
+
+
+
+
         div.services.clearfix 
             div.container
                 H1 services
@@ -81,10 +91,10 @@ html
                         option 50kg
                         option 100 kg
                         option 1000 kg
-                    input.form__message.clearfix
-                    p.form__question.clearfix  How did you hear about us
+                    textarea.form__message.clearfix
+                    p.form__question.clearfix  How did you hear about us?
                     input.form__aunser.clearfix
-                    a.form__send.clearfix(href="" type="submit" ) Get quick qoute
+                    input.form__send.clearfix(href="" type="submit" value="Get free quote" )
                     p.form__line-bottom
 
             //-         div.counter
@@ -150,9 +160,11 @@ html
             //-             +CreateItem3('./images/feedback-customers'+i+'.png', el.title,'Lorem ipsum dolor sit amet, eu sea cetero contentiones, ut mei ridens mollis prodesset. Ne atqui congue eirmod nec, nec assueverit instructior te. Amet expetenda urbanitas ei sed.')&attributes({'class':'reveiw--card'})
             //-         span.icon-chevron-right
 
-        div#map
+    div#map
             //- div.footer   
 
   
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js")
     script(src="./scripts/bundle.min.js")
     script(src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvM0CzDixRaf8jNBdl_wIGhneO2b6-YEY&callback=initMap" async defer)
