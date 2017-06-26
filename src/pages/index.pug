@@ -15,136 +15,143 @@ html
         meta(name="viewport", content="width=device-width, initial-scale=1.0")
 
     body
-        div.wrap
-            div.header.container-fluid
-                div.container
-                    img.header__logo(src="./images/header-logo.png")
-                    ul.header__cities
-                        li.header__city Newark
-                        li.header__city NewJersey
-                        li.header__city Usa
-                    ul.header__menu
-                        each link in links 
-                            li.header__link: a(href="") #{link}
-                    div.header__telephone 
-                            img.header__telephone--icon(src="./images/header-icon.png")
-                            select.header__telephone--select
-                                option(value="(333) 777-3333") (333)777-3333
-                                option (555)777-8888          
-            div.top
-                div.container
-                    div.top__slogan
-                        img.top__slogan--image(src="./images/top-image.png")
-                        p.top__slogan--title Moving New Jersey
-                        p.top__slogan--text We are professionals in their field
-                        div.button
-                            a.top__slogan--btn(href="https://youtu.be/sQgNszUiqLs") Watch videos
+        div.header.clearfix
+            div.container.clearfix
+                img.header__logo.clearfix(src="./images/header-logo.png")
+                ul.header__cities.clearfix
+                    li.header__city Newark
+                    li.header__city NewJersey
+                    li.header__city Usa
+                ul.header__menu.clearfix
+                    each link in links 
+                        li.header__link: a(href="") #{link}
+                div.telephone.clearfix 
+                    img.telephone__icon.clearfix(src="./images/header-icon.png")
+                    select.telephone__select.clearfix
+                        option(value="(333) 777-3333") (333)777-3333
+                        option (555)777-8888          
+        div.top.clearfix
+            div.container
+                div.top-left.clearfix
+                    p.top-left__title.clearfix Moving New Jersey
+                    p.top-left__text.clearfix We are professionals in their field
+                    a.top-left__btn.clearfix(href="https://youtu.be/sQgNszUiqLs") Watch videos
+                div.top-right.clearfix
+                    img.top-right__image.clearfix(src="./images/top-image.png")
                     
-            div.callback
-                div.container
-                    img.callback__image(src="./images/form-image.png")
-                    p.callback__title Do you need a consultation?
-                    p.callback__text Complete the form and our manager will contact you during the day.
-                    input(type="text").callback__form-name
-                    input(type="").callback__form-telephone
-                    input(type="submit").callback__btn-send
-            div.services    
-                div.container
-                    div.services__kind-of-services
-                        H1 services
-                        div.services__kind-of-services--local
-                            each el, i in datalocal
-                                +CreateItem1('./images/services-local-image'+i+'.png',  el.title)&attributes({'class':'services__item-local'})
-                        div.services__kind-of-services--local
-                            each el, i in datalong
-                                +CreateItem2('./images/services-long-distance-image'+i+'.png',  el.title)&attributes({'class':'services__item-long'})
-            div.promotion                   
-                div.container
-                    div.registration(id="registrations")
-                        p.promotion__registration--title Why customers again and again chosen our company services?
-                        p.promotion__registration--text Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?
-                        p.promotion__registration--title-form
-                        input.promotion__registration--name
-                        input.promotion__registration--email
-                        input.promotion__registration--phone
-                        input.promotion__registration--date
-                        input.promotion__registration--zip-from
-                        input.promotion__registration--zip-to
-                        select.promotion__registration--select
-                            option(value="Choose moving size" selected) 
-                            option 50kg
-                            option 100 kg
-                            option 1000 kg
-                        input.promotion__registration--message
-                        p.promotion__registration--question  How did you hear about us
-                        input.promotion__registration--aunser
-                        a.promotion__registration--send(href="") Get quick qoute
+        div.callback.clearfix
+            div.container
+                div.callback-picture.clearfix
+                    img.callback-picture__image.clearfix(src="./images/form-image.png")
+                div.form-title.clearfix
+                    p.form-title__title.clearfix Do you need a consultation?
+                    p.form-title__text.clearfix Complete the form and our manager will contact you during the day.
+                div.form.clearfix
+                    input(type="text" placeholder="Name...").form__name.clearfix
+                    input(type="tel" placeholder="Phone...").form__telephone.clearfix
+                    input(type="submit").btn-send.clearfix 
+        div.services.clearfix 
+            div.container
+                H1 services
+                p.services__title-local Local moving
+                p.services__title-long Long distance moving
+                div.services-item.clearfix
+                    div.items-local.clearfix
+                        each el, i in datalocal
+                            +CreateItem1('./images/services-local-image'+i+'.png',  el.title)&attributes({'class':'items-local__item'})
+                    div.items-long.clearfix
+                        each el, i in datalong
+                            +CreateItem2('./images/services-long-distance-image'+i+'.png',  el.title)&attributes({'class':'items-long__item'})
+        div.promotion.clearfix                   
+            div.container
+                div.registration.clearfix
+                    p.registration__title.clearfix Why customers again and again chosen our company services?
+                    p.registration__text.clearfix Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?
+                div.form.clearfix
+                    p.form__line-top   
+                    p.form__title-form.clearfix Get a free quote
+                    input.form__name.clearfix(placeholder="Full name")
+                    input.form__email.clearfix(placeholder="E-mail")
+                    input.form__phone.clearfix(placeholder="Phone")
+                    input.form__date.clearfix(placeholder="Date")
+                    input.form__zip-from.clearfix(placeholder="Zip from")
+                    input.form__zip-to.clearfix(placeholder="Zip to")
+                    select.form__select.clearfix
+                        option Choose moving size
+                        option 50kg
+                        option 100 kg
+                        option 1000 kg
+                    input.form__message.clearfix
+                    p.form__question.clearfix  How did you hear about us
+                    input.form__aunser.clearfix
+                    a.form__send.clearfix(href="" type="submit" ) Get quick qoute
+                    p.form__line-bottom
 
-                    div.counter
-                        h2 Few of us in numbers
-                        span.icon-Icon-center-left
-                        span.icon-Icon-right
-                        span.icon-Icon-center-right
-                        span.icon-Icon-left
-                        p.counter--text-left Years in business
-                        p.counter--text-center-left Cargo transportation
-                        p.counter--text-center-right Constant clients
-                        p.counter--text-right Annual growth cargo transportation
-                    div.offer
-                        h3 Get a 7% discount on local moving, or 5% on long distance moving. To do this, fill out the form now Get a free quote. By the end of the offer remains
-                        a.offer--btn(href="#registrations") Get a free quote
-                    div.cashback
-                        h4 Refer a friend get a bonus. How it works?
-                        p.cashback--title-left Frank Used NJ Local Moving
-                        p.cashback--title-center-bottom Amy was looking for profesional movers
-                        p.cashback--title-center-top NJ Local Moving Gave bonus to Frank
-                        p.cashback--title-center-left Frank reffered NJ Local Moving
-                        p.cashback--title-center-right Amy booked her job with NJ Local Moving
-                        p.cashback--title-right We are always happy to help
-                        img.cashback--arrow(src="./images/arrow-long.png")
-                        img.cashback--arrow-left(src="./images/arrow-short.png")
-                        img.cashback--arrow-right(src="./images/arrow-short.png")    
-                        img.cashback--image-left(src="./images/cashback-image-left.png")
-                        img.cashback--image-center(src="./images/cashback-image-center.png")
-                        img.cashback--image-right(src="./images/cashback-image-right.png")
-                        p.cashback--text.
-                            Somebody steered you in our direction? That's great news for you - regardless of what you need to move, or whether it's personal or business. Either way, just tell us the name
-                            of the kind person who wants to move and you'll get 7% cash back for a local move and 5% cash back for a long distance move. 
-            div.about
-                div.container
-                    h5 Our company
-                    img.about--image(src="./images/company_image.png")
-                    p.about--text.
-                        Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.
+            //-         div.counter
+            //-             h2 Few of us in numbers
+            //-             span.icon-Icon-center-left
+            //-             span.icon-Icon-right
+            //-             span.icon-Icon-center-right
+            //-             span.icon-Icon-left
+            //-             p.counter--text-left Years in business
+            //-             p.counter--text-center-left Cargo transportation
+            //-             p.counter--text-center-right Constant clients
+            //-             p.counter--text-right Annual growth cargo transportation
+            //-         div.offer
+            //-             h3 Get a 7% discount on local moving, or 5% on long distance moving. To do this, fill out the form now Get a free quote. By the end of the offer remains
+            //-             a.offer--btn(href="#registrations") Get a free quote
+            //-         div.cashback
+            //-             h4 Refer a friend get a bonus. How it works?
+            //-             p.cashback--title-left Frank Used NJ Local Moving
+            //-             p.cashback--title-center-bottom Amy was looking for profesional movers
+            //-             p.cashback--title-center-top NJ Local Moving Gave bonus to Frank
+            //-             p.cashback--title-center-left Frank reffered NJ Local Moving
+            //-             p.cashback--title-center-right Amy booked her job with NJ Local Moving
+            //-             p.cashback--title-right We are always happy to help
+            //-             img.cashback--arrow(src="./images/arrow-long.png")
+            //-             img.cashback--arrow-left(src="./images/arrow-short.png")
+            //-             img.cashback--arrow-right(src="./images/arrow-short.png")    
+            //-             img.cashback--image-left(src="./images/cashback-image-left.png")
+            //-             img.cashback--image-center(src="./images/cashback-image-center.png")
+            //-             img.cashback--image-right(src="./images/cashback-image-right.png")
+            //-             p.cashback--text.
+            //-                 Somebody steered you in our direction? That's great news for you - regardless of what you need to move, or whether it's personal or business. Either way, just tell us the name
+            //-                 of the kind person who wants to move and you'll get 7% cash back for a local move and 5% cash back for a long distance move. 
+            //- div.about
+            //-     div.container
+            //-         h5 Our company
+            //-         img.about--image(src="./images/company_image.png")
+            //-         p.about--text.
+            //-             Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.
             
-                        Quo ut nibh possim. Vis commodo debitis abhorreant ex, eum simul legimus atomorum ex. Ex ferri dolor exerci vel, malis graecis id vim, sea cu debet omittam. Et quis legere sit, quando nostrud periculis ut sit, cu qui summo signiferumque. Tale detracto cu eam, nam ea amet novum fierent. Ad pri porro saepe aperiam, ex has doming pericula ullamcorper. An vix offendit sapientem reprehendunt. Est ad latine ceteros conclusionemque. Sea vocent eripuit te, te sensibus praesent moderatius sit.
+            //-             Quo ut nibh possim. Vis commodo debitis abhorreant ex, eum simul legimus atomorum ex. Ex ferri dolor exerci vel, malis graecis id vim, sea cu debet omittam. Et quis legere sit, quando nostrud periculis ut sit, cu qui summo signiferumque. Tale detracto cu eam, nam ea amet novum fierent. Ad pri porro saepe aperiam, ex has doming pericula ullamcorper. An vix offendit sapientem reprehendunt. Est ad latine ceteros conclusionemque. Sea vocent eripuit te, te sensibus praesent moderatius sit.
 
-                        Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.
-                    p.about--title Dmytro Dyshkant, CEO
-                    p.about--content Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.
-                    img.about--icon(src="./images/about-icon.png")
-            div.faq    
-                div.container
-                    p.faq--title Frequently Asked Questions
-            div.feedback    
-                div.container
-                    p.feedback--title You will not find the answer to your question? 
-                    p.feedback--text Ask your question to the manager, and during the day we will call you back and answer your question?
-                    input.feedback--form-name
-                    input.feedback--form-phone
-                    input.feedback--form-email
-                    input.feedback--form-question
-                    a.feedback--form-send ask
-            div.review
-                div.container
-                    p.review--tit The most important indicator of the level of the company - it is the grateful feedback from our customers
-                    span.icon-chevron-left
-                    each el, i in datareview
-                        +CreateItem3('./images/feedback-customers'+i+'.png', el.title,'Lorem ipsum dolor sit amet, eu sea cetero contentiones, ut mei ridens mollis prodesset. Ne atqui congue eirmod nec, nec assueverit instructior te. Amet expetenda urbanitas ei sed.')&attributes({'class':'reveiw--card'})
-                    span.icon-chevron-right
+            //-             Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.
+            //-         p.about--title Dmytro Dyshkant, CEO
+            //-         p.about--content Lorem ipsum dolor sit amet, molestie quaerendum ex vis. Per nobis iisque id. Sit placerat atomorum scribentur ea, ex nam omnis minimum accusamus. Ipsum tritani eu vis, usu ad falli vitae atomorum. Ei nam convenire omittantur, per rebum dolorum at. Utinam eripuit sententiae his id. In diam detracto fabellas cum, mei in quas fabellas. Pri partem causae cu, in nam malis soluta disputationi, eirmod debitis pri te. Clita possim sit et, qui cu quod laudem laoreet, usu ex unum periculis. Sea no minim quaestio philosophia, vis ea discere alienum pertinax.
+            //-         img.about--icon(src="./images/about-icon.png")
+            //- div.faq    
+            //-     div.container
+            //-         p.faq--title Frequently Asked Questions
+            //- div.feedback    
+            //-     div.container
+            //-         p.feedback--title You will not find the answer to your question? 
+            //-         p.feedback--text Ask your question to the manager, and during the day we will call you back and answer your question?
+            //-         input.feedback--form-name
+            //-         input.feedback--form-phone
+            //-         input.feedback--form-email
+            //-         input.feedback--form-question
+            //-         a.feedback--form-send ask
+            //- div.review
+            //-     div.container
+            //-         p.review--tit The most important indicator of the level of the company - it is the grateful feedback from our customers
+            //-         span.icon-chevron-left
+            //-         each el, i in datareview
+            //-             +CreateItem3('./images/feedback-customers'+i+'.png', el.title,'Lorem ipsum dolor sit amet, eu sea cetero contentiones, ut mei ridens mollis prodesset. Ne atqui congue eirmod nec, nec assueverit instructior te. Amet expetenda urbanitas ei sed.')&attributes({'class':'reveiw--card'})
+            //-         span.icon-chevron-right
 
-            div#map
-            div.footer   
+        div#map
+            //- div.footer   
 
   
     script(src="./scripts/bundle.min.js")
