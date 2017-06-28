@@ -28,8 +28,12 @@ input {
     width 310px
     margin 0 auto
     padding 0 5px
+.header-top
+    width 100%
+    height 92px
+.is-top
+    height 58px    
 .header
-
     width 100%
     height auto
     background-color #1c3051
@@ -38,7 +42,8 @@ input {
     border-bottom-color #ff7101
     padding-top 25px
     z-index 10
-    padding-bottom 15px
+    padding-bottom 25px
+    position fixed
     .header-mob__hide
         display none 
     &__logo
@@ -52,6 +57,7 @@ input {
         border-left-style solid 
         float left 
         margin-left 10px
+        padding-left 3px
         
     &__city
         display block
@@ -87,6 +93,7 @@ input {
             
     .telephone
         display block
+        padding-top 5px
 
         &__icon
             display block
@@ -101,6 +108,8 @@ input {
             background transparent
             color #ffffff
             border none
+            & option
+                background-color #000000
     .header__content
         .header__mob-icon
             float right
@@ -108,6 +117,7 @@ input {
             width 35px
             height 50px
             cursor pointer
+            padding-top 7px
             .header__mob-line
                 width 100%
                 height 5px
@@ -148,10 +158,12 @@ input {
             position relative
         .header__mob-content
             .header__mob-cities
+                padding-left 27px
                 .header__cities
-                    float right
                     margin-bottom 10px
                     margin-top 25px
+                    float left
+
             .header__mob-menu        
                 .header__city
                     font-size 1.5em
@@ -173,7 +185,18 @@ input {
                         
                     &__select
                         float left
-                        margin-left 34px        
+                        margin-left 34px
+.top2 
+    padding-top 100px
+.is-mini-header .header__logo 
+    width 150px
+    padding-top 5px
+.header.is-mini-header 
+    padding 7px 0
+.is-top 
+    padding-top 54px 
+.is-mini-header .telephone
+    padding-top 7px           
          
 .top
     background url('../images/top-bg.png') no-repeat
@@ -279,7 +302,8 @@ input {
             font-size 1em
             outline none
             border 2px solid #ffffff
-            margin 0 auto 15px
+            margin 0 auto 25px
+            position relative
             
             &::-webkit-input-placeholder {
                 color: #ffffff;
@@ -320,8 +344,9 @@ input {
         color red
         position absolute
         margin 5px 
-        padding-left 5px
-        display block       
+        padding-left 25px
+        display block
+        margin -18px 0 15px       
 h1
     text-transform uppercase
     font-size 2.33em
@@ -431,7 +456,7 @@ h1
             font-weight 400
             line-height 25.644px
             font-size 1.15em
-            text-align center
+            text-align justify
     .form
         display block
         width 100%
@@ -454,7 +479,7 @@ h1
             padding-left 25px
             outline none
             border 2px solid #ffffff
-            margin 5px 0 5px
+            margin 5px 0 18px
             &::-webkit-input-placeholder{color: #ffffff;}
             &:-moz-placeholder {color: #ffffff;}
             &::-moz-placeholder {color: #ffffff;}
@@ -463,7 +488,11 @@ h1
             &:focus::-moz-placeholder {color: transparent}
             &:focus:-moz-placeholder {color: transparent}
             &:focus:-ms-input-placeholder {color: transparent}
-
+        .name, .email, .phone, .date, .zip-from, .zip-to
+            position relative
+        label.error
+            position absolute
+            padding 5px 0 0 25px    
         &__select
             margin 20px 0 15px
             & option 
@@ -511,7 +540,8 @@ h1
         label.error
             color red
             padding-left 25px
-#map
+            top 95%
+#block4
     width 100%
     height 400px
     background-color grey
@@ -563,9 +593,20 @@ h1
             &.error
                 float right
         label.error        
-            margin 0 0 15px
+            margin -20px 0 15px
         &__btn-send        
             margin 0 auto 15px
+    .promotion
+        .form
+            .name, .email, .phone, .date, .zip-from, .zip-to
+                position relative
+            label.error
+                position absolute
+                padding 11px 0px 0 25px   
+                top 122% 
+            
+
+
 
 @media screen and (min-width: 960px) 
     .container
@@ -608,14 +649,22 @@ h1
                 margin 10px 0 10px
             .name, .email, .phone, .date, .zip-from, .zip-to, .question, .aunser, .send
                 width 48.8%   
-                margin 5px 0 5px                     
+                margin 5px 0 5px
+                display block
+                position relative                     
             .name, .phone, .zip-from, .aunser
                 float left
             .email, .date, .zip-to
                 float right
+            .zip-from, .zip-to
+                padding-bottom 10px    
             .select
             .message
-                margin-top 10px 0 10px    
+                margin-top 10px 0 10px
+            label.error
+                position absolute
+                padding 11px 0px 0 25px 
+                top auto   
     
    
     .services__wrap
@@ -663,9 +712,14 @@ h1
         .callback-picture
             display block
             position absolute
-            left -3%
-            right 0
-            transform translateY(-21.1%) translateX(7%)
+            // left -3%
+            // right 0
+            // transform translateY(-21.1%) translateX(7%)
+            &__image
+                position absolute
+                left -70px
+                right 0
+                transform translateY(-21%) translateX(-26%)    
         .form-title
             width 825px
             padding-top 50px

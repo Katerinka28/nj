@@ -164,6 +164,13 @@ input {
   margin: 0 auto;
   padding: 0 5px;
 }
+.header-top {
+  width: 100%;
+  height: 92px;
+}
+.is-top {
+  height: 58px;
+}
 .header {
   width: 100%;
   height: auto;
@@ -173,7 +180,8 @@ input {
   border-bottom-color: #ff7101;
   padding-top: 25px;
   z-index: 10;
-  padding-bottom: 15px;
+  padding-bottom: 25px;
+  position: fixed;
 }
 .header .header-mob__hide {
   display: none;
@@ -189,6 +197,7 @@ input {
   border-left-style: solid;
   float: left;
   margin-left: 10px;
+  padding-left: 3px;
 }
 .header__city {
   display: block;
@@ -229,6 +238,7 @@ input {
 }
 .header .telephone {
   display: block;
+  padding-top: 5px;
 }
 .header .telephone__icon {
   display: block;
@@ -244,12 +254,16 @@ input {
   color: #fff;
   border: none;
 }
+.header .telephone__select option {
+  background-color: #000;
+}
 .header .header__content .header__mob-icon {
   float: right;
   display: block;
   width: 35px;
   height: 50px;
   cursor: pointer;
+  padding-top: 7px;
 }
 .header .header__content .header__mob-icon .header__mob-line {
   width: 100%;
@@ -291,10 +305,13 @@ input {
   height: 100%;
   position: relative;
 }
+.header .is-mobile-header .header__mob-content .header__mob-cities {
+  padding-left: 27px;
+}
 .header .is-mobile-header .header__mob-content .header__mob-cities .header__cities {
-  float: right;
   margin-bottom: 10px;
   margin-top: 25px;
+  float: left;
 }
 .header .is-mobile-header .header__mob-content .header__mob-menu .header__city {
   font-size: 1.5em;
@@ -320,6 +337,22 @@ input {
 .header .is-mobile-header .header__mob-content .header__mob-telephone .telephone__select {
   float: left;
   margin-left: 34px;
+}
+.top2 {
+  padding-top: 100px;
+}
+.is-mini-header .header__logo {
+  width: 150px;
+  padding-top: 5px;
+}
+.header.is-mini-header {
+  padding: 7px 0;
+}
+.is-top {
+  padding-top: 54px;
+}
+.is-mini-header .telephone {
+  padding-top: 7px;
 }
 .top {
   background: url("../images/top-bg.png") no-repeat;
@@ -432,7 +465,8 @@ input {
   font-size: 1em;
   outline: none;
   border: 2px solid #fff;
-  margin: 0 auto 15px;
+  margin: 0 auto 25px;
+  position: relative;
 }
 .callback .form__name::-webkit-input-placeholder,
 .callback .form__telephone::-webkit-input-placeholder {
@@ -491,8 +525,9 @@ input {
   color: #f00;
   position: absolute;
   margin: 5px;
-  padding-left: 5px;
+  padding-left: 25px;
   display: block;
+  margin: -18px 0 15px;
 }
 h1 {
   text-transform: uppercase;
@@ -611,7 +646,7 @@ h1 {
   font-weight: 400;
   line-height: 25.644px;
   font-size: 1.15em;
-  text-align: center;
+  text-align: justify;
 }
 .promotion .form {
   display: block;
@@ -644,7 +679,7 @@ h1 {
   padding-left: 25px;
   outline: none;
   border: 2px solid #fff;
-  margin: 5px 0 5px;
+  margin: 5px 0 18px;
 }
 .promotion .form__name::-webkit-input-placeholder,
 .promotion .form__email::-webkit-input-placeholder,
@@ -734,6 +769,18 @@ h1 {
 .promotion .form__select:focus:-ms-input-placeholder {
   color: transparent;
 }
+.promotion .form .name,
+.promotion .form .email,
+.promotion .form .phone,
+.promotion .form .date,
+.promotion .form .zip-from,
+.promotion .form .zip-to {
+  position: relative;
+}
+.promotion .form label.error {
+  position: absolute;
+  padding: 5px 0 0 25px;
+}
 .promotion .form__select {
   margin: 20px 0 15px;
 }
@@ -804,8 +851,9 @@ h1 {
 .promotion .form label.error {
   color: #f00;
   padding-left: 25px;
+  top: 95%;
 }
-#map {
+#block4 {
   width: 100%;
   height: 400px;
   background-color: #808080;
@@ -862,10 +910,23 @@ h1 {
     float: right;
   }
   .form label.error {
-    margin: 0 0 15px;
+    margin: -20px 0 15px;
   }
   .form__btn-send {
     margin: 0 auto 15px;
+  }
+  .promotion .form .name,
+  .promotion .form .email,
+  .promotion .form .phone,
+  .promotion .form .date,
+  .promotion .form .zip-from,
+  .promotion .form .zip-to {
+    position: relative;
+  }
+  .promotion .form label.error {
+    position: absolute;
+    padding: 11px 0px 0 25px;
+    top: 122%;
   }
 }
 @media screen and (min-width: 960px) {
@@ -922,6 +983,8 @@ h1 {
   .promotion .form .send {
     width: 48.8%;
     margin: 5px 0 5px;
+    display: block;
+    position: relative;
   }
   .promotion .form .name,
   .promotion .form .phone,
@@ -934,9 +997,18 @@ h1 {
   .promotion .form .zip-to {
     float: right;
   }
+  .promotion .form .zip-from,
+  .promotion .form .zip-to {
+    padding-bottom: 10px;
+  }
   .promotion .form .select,
   .promotion .form .message {
     margin-top: 10px 0 10px;
+  }
+  .promotion .form label.error {
+    position: absolute;
+    padding: 11px 0px 0 25px;
+    top: auto;
   }
   .services__wrap {
     display: block;
@@ -988,11 +1060,14 @@ h1 {
   .callback .callback-picture {
     display: block;
     position: absolute;
-    left: -3%;
+  }
+  .callback .callback-picture__image {
+    position: absolute;
+    left: -70px;
     right: 0;
-    -webkit-transform: translateY(-21.1%) translateX(7%);
-    -ms-transform: translateY(-21.1%) translateX(7%);
-    transform: translateY(-21.1%) translateX(7%);
+    -webkit-transform: translateY(-21%) translateX(-26%);
+    -ms-transform: translateY(-21%) translateX(-26%);
+    transform: translateY(-21%) translateX(-26%);
   }
   .callback .form-title {
     width: 825px;

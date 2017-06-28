@@ -20,12 +20,12 @@
               </ul>
             </div>
             <div class="header__block header-mob__hide">      
-              <ul class="header__menu clearfix">
-                <li class="header__link"><a href="">Services</a></li>
-                <li class="header__link"><a href="">Promotions</a></li>
-                <li class="header__link"><a href="">FAQs</a></li>
-                <li class="header__link"><a href="">Reviews</a></li>
-                <li class="header__link"><a href="">About us</a></li>
+              <ul class="header__menu clearfix" id="menu">
+                <li class="header__link"><a href="#block0">Services</a></li>
+                <li class="header__link"><a href="#block1">Promotions</a></li>
+                <li class="header__link"><a href="#block2">FAQs</a></li>
+                <li class="header__link"><a href="#block3">Reviews</a></li>
+                <li class="header__link"><a href="#block4">About us</a></li>
               </ul>
             </div>
             <div class="header__block header-mob__hide"> 
@@ -54,12 +54,12 @@
                   </ul>
                 </div>
                 <div class="header__mob-menu">
-                  <ul class="header__menu clearfix">
-                    <li class="header__link"><a href="">Services </a></li>
-                    <li class="header__link"><a href="">Promotions </a></li>
-                    <li class="header__link"><a href="">FAQs </a></li>
-                    <li class="header__link"><a href="">Reviews </a></li>
-                    <li class="header__link"><a href="">About us </a></li>
+                  <ul class="header__menu clearfix" id="menu-mob">
+                    <li class="header__link"><a href="#block0">Services</a></li>
+                    <li class="header__link"><a href="#block1">Promotions</a></li>
+                    <li class="header__link"><a href="#block2">FAQs</a></li>
+                    <li class="header__link"><a href="#block3">Reviews</a></li>
+                    <li class="header__link"><a href="#block4">About us</a></li>
                   </ul>
                 </div>
                 <div class="header__mob-telephone">
@@ -76,111 +76,123 @@
         </div>
       </div>
     </div>
+    <div class="top2"></div>
     <div class="top clearfix">
       <div class="container">
-        <div class="top-left clearfix">
-          <p class="top-left__title clearfix">Moving New Jersey</p>
-          <p class="top-left__text clearfix">We are professionals in their field</p><a class="top-left__btn clearfix" href="https://youtu.be/sQgNszUiqLs">Watch videos</a>
-        </div>
-        <div class="top-right clearfix"><img class="top-right__image clearfix" src="./images/top-image.png"></div>
+        <section id="block0">
+          <div class="top-left clearfix">
+            <p class="top-left__title clearfix">Moving New Jersey</p>
+            <p class="top-left__text clearfix">We are professionals in their field</p><a class="top-left__btn clearfix" href="https://youtu.be/sQgNszUiqLs">Watch videos</a>
+          </div>
+          <div class="top-right clearfix"><img class="top-right__image clearfix" src="./images/top-image.png"></div>
+        </section>
       </div>
     </div>
     <div class="callback clearfix">
       <div class="container">
-        <div class="callback-picture clearfix"><img class="callback-picture__image clearfix" src="./images/form-image.png"></div>
-        <div class="form-title clearfix">
-          <p class="form-title__title clearfix">Do you need a consultation?</p>
-          <p class="form-title__text clearfix">Complete the form and our manager will contact you during the day.</p>
-        </div>
-        <form class="form clearfix" type="" action="" id="form">
-          <div class="form-name">
-            <input class="form__name clearfix" name="name" id="name" type="text" placeholder="Name..." required minlength="2" pattern="[A-Za-zА-Яа-яЁё]">
+        <section id="block1">
+          <div class="callback-picture clearfix"><img class="callback-picture__image clearfix" src="./images/form-image.png"></div>
+          <div class="form-title clearfix">
+            <p class="form-title__title clearfix">Do you need a consultation?</p>
+            <p class="form-title__text clearfix">Complete the form and our manager will contact you during the day.</p>
           </div>
-          <div class="form-telephone">
-            <input class="form__telephone clearfix" name="tel" id="tel" type="tel" placeholder="Phone..." required maxlength="10" pattern="^[+()0-9]+$">
-          </div>
-          <input class="btn-send clearfix" type="submit" value="Send">
-        </form>
+          <form class="form clearfix" type="" action="" id="form">
+            <div class="form-name">
+              <input class="name form__name clearfix" name="name" id="name" type="text" placeholder="Name...">
+            </div>
+            <div class="form-telephone">
+              <input class="tel form__telephone clearfix" name="tel" id="tel" type="tel" placeholder="Phone...">
+            </div>
+            <input class="btn-send clearfix" type="submit" value="Send">
+          </form>
+        </section>
       </div>
     </div>
     <div class="services clearfix"> 
       <div class="container">
-        <H1>services</H1>
-        <div class="services__wrap">
-          <p class="services__title-local">Local moving</p>
-          <p class="services__title-long">Long distance moving</p>
-          <div class="services-item clearfix">
-            <div class="items-local clearfix">
-              <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image0.png"/>
-                <p class="items-local__item__title">Packing</p>
+        <section id="block2">
+          <H1>services</H1>
+          <div class="services__wrap">
+            <p class="services__title-local">Local moving</p>
+            <p class="services__title-long">Long distance moving</p>
+            <div class="services-item clearfix">
+              <div class="items-local clearfix">
+                <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image0.png"/>
+                  <p class="items-local__item__title">Packing</p>
+                </div>
+                <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image1.png"/>
+                  <p class="items-local__item__title">Unpacking</p>
+                </div>
+                <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image2.png"/>
+                  <p class="items-local__item__title">Labor Jobs</p>
+                </div>
               </div>
-              <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image1.png"/>
-                <p class="items-local__item__title">Unpacking</p>
-              </div>
-              <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image2.png"/>
-                <p class="items-local__item__title">Labor Jobs</p>
-              </div>
-            </div>
-            <div class="items-long clearfix">
-              <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image0.png"/>
-                <p class="items-long__item__title">Hauling</p>
-              </div>
-              <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image1.png"/>
-                <p class="items-long__item__title">Delivery service</p>
-              </div>
-              <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image2.png"/>
-                <p class="items-long__item__title">Commercial Moving</p>
+              <div class="items-long clearfix">
+                <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image0.png"/>
+                  <p class="items-long__item__title">Hauling</p>
+                </div>
+                <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image1.png"/>
+                  <p class="items-long__item__title">Delivery service</p>
+                </div>
+                <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image2.png"/>
+                  <p class="items-long__item__title">Commercial Moving</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
+        </section>
       </div>
     </div>
     <div class="promotion clearfix">                  
       <div class="container">
-        <div class="registration clearfix">
-          <p class="registration__title clearfix">Why customers again and again chosen our company services?</p>
-          <p class="registration__text clearfix">Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?</p>
-        </div>
-        <form class="form clearfix" type="" action="" id="newform">
-          <p class="form__title-form clearfix">Get a free quote</p>
-          <div class="name">
-            <input class="form__name clearfix" name="name" id="name" type="text" placeholder="Full name" required>
+        <section id="block3">
+          <div class="registration clearfix">
+            <p class="registration__title clearfix">Why customers again and again chosen our company services?</p>
+            <p class="registration__text clearfix">Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?</p>
           </div>
-          <div class="email">
-            <input class="form__email clearfix" name="email" id="email" type="text" placeholder="E-mail" required>
-          </div>
-          <div class="phone">
-            <input class="form__phone clearfix" name="phone" id="phone" type="tel" placeholder="Phone" required>
-          </div>
-          <div class="date">
-            <input class="form__date clearfix" name="date" id="date" type="data" placeholder="Date" required>
-          </div>
-          <div class="zip-from">
-            <input class="form__zip-from clearfix" name="zip-from" id="zip-from" type="text" placeholder="Zip from" required>
-          </div>
-          <div class="zip-to">
-            <input class="form__zip-to clearfix" name="zip-to" id="zip-to" type="text" placeholder="Zip to" required>
-          </div>
-          <select class="form__select clearfix">
-            <option>Choose moving size</option>
-            <option>50kg</option>
-            <option>100 kg</option>
-            <option>1000 kg</option>
-          </select>
-          <textarea class="form__message clearfix" placeholder="Your message"></textarea>
-          <p class="form__question clearfix"> How did you hear about us?</p>
-          <div class="aunser">
-            <input class="form__aunser clearfix" name="aunser" id="aunser" type="text" placeholder="Your aunser">
-          </div>
-          <input class="form__send clearfix" type="submit" value="Get free quote">
-        </form>
+        </section>
+        <section id="block5">
+          <form class="form clearfix" type="" action="" id="newform">
+            <p class="form__title-form clearfix">Get a free quote</p>
+            <div class="name">
+              <input class="form__name clearfix" name="name" id="name" type="text" placeholder="Full name" required>
+            </div>
+            <div class="email">
+              <input class="form__email clearfix" name="email" id="email" type="text" placeholder="E-mail" required>
+            </div>
+            <div class="phone">
+              <input class="form__phone clearfix" name="phone" id="phone" type="tel" placeholder="Phone" required>
+            </div>
+            <div class="date">
+              <input class="form__date clearfix" name="date" id="date" type="data" placeholder="Date" required>
+            </div>
+            <div class="zip-from">
+              <input class="form__zip-from clearfix" name="zip-from" id="zip-from" type="text" placeholder="Zip from" required>
+            </div>
+            <div class="zip-to">
+              <input class="form__zip-to clearfix" name="zip-to" id="zip-to" type="text" placeholder="Zip to" required>
+            </div>
+            <select class="form__select clearfix">
+              <option>Choose moving size</option>
+              <option>50kg</option>
+              <option>100 kg</option>
+              <option>1000 kg</option>
+            </select>
+            <textarea class="form__message clearfix" placeholder="Your message"></textarea>
+            <p class="form__question clearfix"> How did you hear about us?</p>
+            <div class="aunser">
+              <input class="form__aunser clearfix" name="aunser" id="aunser" type="text" placeholder="Your aunser">
+            </div>
+            <input class="form__send clearfix" type="submit" value="Get free quote">
+          </form>
+        </section>
       </div>
     </div>
+    <div id="block4"></div>
   </body>
-  <div id="map"></div>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-validate/1.16.0/jquery.validate.min.js"></script>
   <script src="./scripts/bundle.min.js"></script>
+  <script src="./scripts/maskinput.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCvM0CzDixRaf8jNBdl_wIGhneO2b6-YEY&amp;callback=initMap" async defer></script>
 </html>
