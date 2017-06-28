@@ -8,24 +8,71 @@
   </head>
   <body>
     <div class="header clearfix">
-      <div class="container clearfix"><img class="header__logo clearfix" src="./images/header-logo.png">
-        <ul class="header__cities clearfix">
-          <li class="header__city">Newark</li>
-          <li class="header__city">NewJersey</li>
-          <li class="header__city">Usa</li>
-        </ul>
-        <ul class="header__menu clearfix">
-          <li class="header__link"><a href="">Services</a></li>
-          <li class="header__link"><a href="">Promotions</a></li>
-          <li class="header__link"><a href="">FAQs</a></li>
-          <li class="header__link"><a href="">Reviews</a></li>
-          <li class="header__link"><a href="">About us</a></li>
-        </ul>
-        <div class="telephone clearfix"> <img class="telephone__icon clearfix" src="./images/header-icon.png">
-          <select class="telephone__select clearfix">
-            <option value="(333) 777-3333">(333)777-3333</option>
-            <option>(555)777-8888          </option>
-          </select>
+      <div class="container clearfix">
+        <div class="header__content">   
+          <div class="header__part">
+            <div class="header__block"><img class="header__logo clearfix" src="./images/header-logo.png"></div>
+            <div class="header__block header-mob__hide">
+              <ul class="header__cities clearfix">
+                <li class="header__city">Newark</li>
+                <li class="header__city">NewJersey</li>
+                <li class="header__city">Usa</li>
+              </ul>
+            </div>
+            <div class="header__block header-mob__hide">      
+              <ul class="header__menu clearfix">
+                <li class="header__link"><a href="">Services</a></li>
+                <li class="header__link"><a href="">Promotions</a></li>
+                <li class="header__link"><a href="">FAQs</a></li>
+                <li class="header__link"><a href="">Reviews</a></li>
+                <li class="header__link"><a href="">About us</a></li>
+              </ul>
+            </div>
+            <div class="header__block header-mob__hide"> 
+              <div class="telephone clearfix"> <img class="telephone__icon clearfix" src="./images/header-icon.png">
+                <select class="telephone__select clearfix">
+                  <option value="(333) 777-3333">(333)777-3333</option>
+                  <option>(555)777-8888</option>
+                </select>
+              </div>
+            </div>
+          </div>
+          <div class="header__mob-icon">
+            <div class="header__mob-line"></div>
+            <div class="header__mob-line"></div>
+            <div class="header__mob-line"></div>
+          </div>
+          <div class="header__mobile">
+            <div class="header__mob-wrapper">
+              <div class="header__mob-close"><span class="icon-close3"></span></div>
+              <div class="header__mob-content">
+                <div class="header__mob-cities">
+                  <ul class="header__cities clearfix">
+                    <li class="header__city">Newark</li>
+                    <li class="header__city">NewJersey</li>
+                    <li class="header__city">Usa</li>
+                  </ul>
+                </div>
+                <div class="header__mob-menu">
+                  <ul class="header__menu clearfix">
+                    <li class="header__link"><a href="">Services </a></li>
+                    <li class="header__link"><a href="">Promotions </a></li>
+                    <li class="header__link"><a href="">FAQs </a></li>
+                    <li class="header__link"><a href="">Reviews </a></li>
+                    <li class="header__link"><a href="">About us </a></li>
+                  </ul>
+                </div>
+                <div class="header__mob-telephone">
+                  <div class="telephone clearfix"> <img class="telephone__icon clearfix" src="./images/header-icon.png">
+                    <select class="telephone__select clearfix">
+                      <option value="(333) 777-3333">(333)777-3333</option>
+                      <option>(555)777-8888               </option>
+                    </select>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -46,8 +93,12 @@
           <p class="form-title__text clearfix">Complete the form and our manager will contact you during the day.</p>
         </div>
         <form class="form clearfix" type="" action="" id="form">
-          <input class="form__name clearfix" name="name" id="name" type="text" placeholder="Name..." required>
-          <input class="form__telephone clearfix" name="tel" id="tel" type="tel" placeholder="Phone..." required>
+          <div class="form-name">
+            <input class="form__name clearfix" name="name" id="name" type="text" placeholder="Name..." required minlength="2" pattern="[A-Za-zА-Яа-яЁё]">
+          </div>
+          <div class="form-telephone">
+            <input class="form__telephone clearfix" name="tel" id="tel" type="tel" placeholder="Phone..." required maxlength="10" pattern="^[+()0-9]+$">
+          </div>
           <input class="btn-send clearfix" type="submit" value="Send">
         </form>
       </div>
@@ -55,29 +106,31 @@
     <div class="services clearfix"> 
       <div class="container">
         <H1>services</H1>
-        <p class="services__title-local">Local moving</p>
-        <p class="services__title-long">Long distance moving</p>
-        <div class="services-item clearfix">
-          <div class="items-local clearfix">
-            <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image0.png"/>
-              <p class="items-local__item__title">Packing</p>
+        <div class="services__wrap">
+          <p class="services__title-local">Local moving</p>
+          <p class="services__title-long">Long distance moving</p>
+          <div class="services-item clearfix">
+            <div class="items-local clearfix">
+              <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image0.png"/>
+                <p class="items-local__item__title">Packing</p>
+              </div>
+              <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image1.png"/>
+                <p class="items-local__item__title">Unpacking</p>
+              </div>
+              <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image2.png"/>
+                <p class="items-local__item__title">Labor Jobs</p>
+              </div>
             </div>
-            <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image1.png"/>
-              <p class="items-local__item__title">Unpacking</p>
-            </div>
-            <div class="items-local__item"><img class="items-local__item__image" src="./images/services-local-image2.png"/>
-              <p class="items-local__item__title">Labor Jobs</p>
-            </div>
-          </div>
-          <div class="items-long clearfix">
-            <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image0.png"/>
-              <p class="items-long__item__title">Hauling</p>
-            </div>
-            <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image1.png"/>
-              <p class="items-long__item__title">Delivery service</p>
-            </div>
-            <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image2.png"/>
-              <p class="items-long__item__title">Commercial Moving</p>
+            <div class="items-long clearfix">
+              <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image0.png"/>
+                <p class="items-long__item__title">Hauling</p>
+              </div>
+              <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image1.png"/>
+                <p class="items-long__item__title">Delivery service</p>
+              </div>
+              <div class="items-long__item"><img class="items-long__item__image" src="./images/services-long-distance-image2.png"/>
+                <p class="items-long__item__title">Commercial Moving</p>
+              </div>
             </div>
           </div>
         </div>
@@ -89,27 +142,39 @@
           <p class="registration__title clearfix">Why customers again and again chosen our company services?</p>
           <p class="registration__text clearfix">Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?</p>
         </div>
-        <div class="form clearfix">
-          <p class="form__line-top">  </p>
+        <form class="form clearfix" type="" action="" id="newform">
           <p class="form__title-form clearfix">Get a free quote</p>
-          <input class="form__name clearfix" placeholder="Full name">
-          <input class="form__email clearfix" placeholder="E-mail">
-          <input class="form__phone clearfix" placeholder="Phone">
-          <input class="form__date clearfix" placeholder="Date">
-          <input class="form__zip-from clearfix" placeholder="Zip from">
-          <input class="form__zip-to clearfix" placeholder="Zip to">
+          <div class="name">
+            <input class="form__name clearfix" name="name" id="name" type="text" placeholder="Full name" required>
+          </div>
+          <div class="email">
+            <input class="form__email clearfix" name="email" id="email" type="text" placeholder="E-mail" required>
+          </div>
+          <div class="phone">
+            <input class="form__phone clearfix" name="phone" id="phone" type="tel" placeholder="Phone" required>
+          </div>
+          <div class="date">
+            <input class="form__date clearfix" name="date" id="date" type="data" placeholder="Date" required>
+          </div>
+          <div class="zip-from">
+            <input class="form__zip-from clearfix" name="zip-from" id="zip-from" type="text" placeholder="Zip from" required>
+          </div>
+          <div class="zip-to">
+            <input class="form__zip-to clearfix" name="zip-to" id="zip-to" type="text" placeholder="Zip to" required>
+          </div>
           <select class="form__select clearfix">
             <option>Choose moving size</option>
             <option>50kg</option>
             <option>100 kg</option>
             <option>1000 kg</option>
           </select>
-          <textarea class="form__message clearfix"></textarea>
+          <textarea class="form__message clearfix" placeholder="Your message"></textarea>
           <p class="form__question clearfix"> How did you hear about us?</p>
-          <input class="form__aunser clearfix">
-          <input class="form__send clearfix" href="" type="submit" value="Get free quote">
-          <p class="form__line-bottom"></p>
-        </div>
+          <div class="aunser">
+            <input class="form__aunser clearfix" name="aunser" id="aunser" type="text" placeholder="Your aunser">
+          </div>
+          <input class="form__send clearfix" type="submit" value="Get free quote">
+        </form>
       </div>
     </div>
   </body>

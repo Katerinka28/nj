@@ -18,19 +18,50 @@ html
     body
         div.header.clearfix
             div.container.clearfix
-                img.header__logo.clearfix(src="./images/header-logo.png")
-                ul.header__cities.clearfix
-                    li.header__city Newark
-                    li.header__city NewJersey
-                    li.header__city Usa
-                ul.header__menu.clearfix
-                    each link in links 
-                        li.header__link: a(href="") #{link}
-                div.telephone.clearfix 
-                    img.telephone__icon.clearfix(src="./images/header-icon.png")
-                    select.telephone__select.clearfix
-                        option(value="(333) 777-3333") (333)777-3333
-                        option (555)777-8888          
+                div.header__content    
+                    div.header__part
+                        div.header__block
+                            img.header__logo.clearfix(src="./images/header-logo.png")
+                        div.header__block.header-mob__hide
+                            ul.header__cities.clearfix
+                                li.header__city Newark
+                                li.header__city NewJersey
+                                li.header__city Usa
+                        div.header__block.header-mob__hide       
+                            ul.header__menu.clearfix
+                                each link in links 
+                                    li.header__link: a(href="") #{link}
+                        div.header__block.header-mob__hide  
+                            div.telephone.clearfix 
+                                img.telephone__icon.clearfix(src="./images/header-icon.png")
+                                select.telephone__select.clearfix
+                                    option(value="(333) 777-3333") (333)777-3333
+                                    option (555)777-8888
+                    div.header__mob-icon
+                        div.header__mob-line
+                        div.header__mob-line
+                        div.header__mob-line
+                    div.header__mobile
+                        div.header__mob-wrapper
+                            div.header__mob-close
+                                span.icon-close3
+                            div.header__mob-content
+                                div.header__mob-cities
+                                    ul.header__cities.clearfix
+                                        li.header__city Newark
+                                        li.header__city NewJersey
+                                        li.header__city Usa
+                                div.header__mob-menu
+                                    ul.header__menu.clearfix
+                                        each link in links 
+                                            li.header__link: a(href="") #{link} 
+                                div.header__mob-telephone
+                                    div.telephone.clearfix 
+                                        img.telephone__icon.clearfix(src="./images/header-icon.png")
+                                        select.telephone__select.clearfix
+                                            option(value="(333) 777-3333") (333)777-3333
+                                            option (555)777-8888               
+
         div.top.clearfix
             div.container
                 div.top-left.clearfix
@@ -48,54 +79,57 @@ html
                     p.form-title__title.clearfix Do you need a consultation?
                     p.form-title__text.clearfix Complete the form and our manager will contact you during the day.
                 form(type="" action="").form#form.clearfix
-                    
-                    input(name="name" id="name" type="text" placeholder="Name..." required).form__name.clearfix 
-                    input(name="tel" id="tel" type="tel" placeholder="Phone..." required).form__telephone.clearfix
+                    div.form-name
+                        input(name="name" id="name" type="text" placeholder="Name..." required minlength="2" pattern ="[A-Za-zА-Яа-яЁё]" ).form__name.clearfix 
+                        
+                    div.form-telephone
+                        input(name="tel" id="tel" type="tel" placeholder="Phone..." required maxlength="10" pattern="^[+()0-9]+$").form__telephone.clearfix
+
                     input(type="submit" value="Send").btn-send.clearfix
-                        
-                        
-                           
-
-
-
-
 
         div.services.clearfix 
             div.container
                 H1 services
-                p.services__title-local Local moving
-                p.services__title-long Long distance moving
-                div.services-item.clearfix
-                    div.items-local.clearfix
-                        each el, i in datalocal
-                            +CreateItem1('./images/services-local-image'+i+'.png',  el.title)&attributes({'class':'items-local__item'})
-                    div.items-long.clearfix
-                        each el, i in datalong
-                            +CreateItem2('./images/services-long-distance-image'+i+'.png',  el.title)&attributes({'class':'items-long__item'})
+                div.services__wrap
+                    p.services__title-local Local moving
+                    p.services__title-long Long distance moving
+                    div.services-item.clearfix
+                        div.items-local.clearfix
+                            each el, i in datalocal
+                                +CreateItem1('./images/services-local-image'+i+'.png',  el.title)&attributes({'class':'items-local__item'})
+                        div.items-long.clearfix
+                            each el, i in datalong
+                                +CreateItem2('./images/services-long-distance-image'+i+'.png',  el.title)&attributes({'class':'items-long__item'})
         div.promotion.clearfix                   
             div.container
                 div.registration.clearfix
                     p.registration__title.clearfix Why customers again and again chosen our company services?
                     p.registration__text.clearfix Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?Why customers again and again chosen our company services?
-                div.form.clearfix
-                    p.form__line-top   
+                form(type="" action="").form#newform.clearfix
                     p.form__title-form.clearfix Get a free quote
-                    input.form__name.clearfix(placeholder="Full name")
-                    input.form__email.clearfix(placeholder="E-mail")
-                    input.form__phone.clearfix(placeholder="Phone")
-                    input.form__date.clearfix(placeholder="Date")
-                    input.form__zip-from.clearfix(placeholder="Zip from")
-                    input.form__zip-to.clearfix(placeholder="Zip to")
+                    div.name
+                        input.form__name.clearfix(name="name" id="name" type="text" placeholder="Full name" required)
+                    div.email
+                        input.form__email.clearfix(name="email" id="email" type="text" placeholder="E-mail" required)
+                    div.phone
+                        input.form__phone.clearfix(name="phone" id="phone" type="tel" placeholder="Phone" required)
+                    div.date
+                        input.form__date.clearfix(name="date" id="date" type="data" placeholder="Date" required)
+                    div.zip-from
+                        input.form__zip-from.clearfix(name="zip-from" id="zip-from" type="text" placeholder="Zip from" required)
+                    div.zip-to
+                        input.form__zip-to.clearfix(name="zip-to" id="zip-to" type="text" placeholder="Zip to" required)
                     select.form__select.clearfix
                         option Choose moving size
                         option 50kg
                         option 100 kg
                         option 1000 kg
-                    textarea.form__message.clearfix
+                    textarea.form__message.clearfix(placeholder="Your message" )
                     p.form__question.clearfix  How did you hear about us?
-                    input.form__aunser.clearfix
-                    input.form__send.clearfix(href="" type="submit" value="Get free quote" )
-                    p.form__line-bottom
+                    div.aunser
+                        input.form__aunser.clearfix(name="aunser" id="aunser" type="text" placeholder="Your aunser")
+                    input.form__send.clearfix(type="submit" value="Get free quote" )
+
 
             //-         div.counter
             //-             h2 Few of us in numbers
